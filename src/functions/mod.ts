@@ -1,2 +1,2 @@
 export * from "./ceramic.ts";
-export * from "./database.ts";
+export * from "./stream.ts";

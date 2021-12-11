@@ -1,5 +1,5 @@
 import { Ceramic, CeramicConfig } from "../types/mod.ts";
-import { getStream } from "./database.ts";
+import { getStream } from "./stream.ts";
 
 export function ceramic(config: CeramicConfig): Ceramic {
 	return {
