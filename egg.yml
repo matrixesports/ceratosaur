@@ -1,0 +1,18 @@
+$schema: 'https://x.nest.land/eggs@0.3.10/src/schema.json'
+name: ceratosaur
+entry: ./src/mod.ts
+description: Wrapper for Ceramic HTTP API
+homepage: ''
+version: 1.0.0-beta-3
+releaseType: null
+unstable: true
+unlisted: true
+files:
+  - ./src/**
+  - ./README.md
+  - ./.gitignore
+ignore: []
+checkFormat: false
+checkTests: false
+checkInstallation: false
+check: true

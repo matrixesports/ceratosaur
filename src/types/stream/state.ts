@@ -2,5 +2,6 @@
 
 export interface State {
 	content: any;
+	log: any;
 	type: number;
 }
