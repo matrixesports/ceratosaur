@@ -2,8 +2,8 @@ $schema: 'https://x.nest.land/eggs@0.3.10/src/schema.json'
 name: ceratosaur
 entry: ./src/mod.ts
 description: Wrapper for Ceramic HTTP API
-homepage: ''
-version: 1.0.0-beta-3
+homepage: 'https://github.com/matrixesports/ceratosaur'
+version: 1.0.0-beta-4
 releaseType: null
 unstable: true
 unlisted: true
