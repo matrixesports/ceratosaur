@@ -28,4 +28,4 @@ getStream("http://localhost:7007/api/v0/streams", "k2t6wyfsu4pg2qvoorchoj23e8hf3
 
 ## Docs
 
-You can see a simple docs in the [Generated deno.land Docs](https://https://doc.deno.land/https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts/)
+You can see a simple docs in the [Generated deno.land Docs](https://doc.deno.land/https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts/)
