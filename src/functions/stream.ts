@@ -1,18 +1,30 @@
 /** Get a stream info by url and id */
-export async function getStream(url: string, id: string) {
-	const data = await (await fetch(`${url}/${id}`, {
-		method: "GET",
-	})).json();
+export async function getStream(
+	/** Ceramic database url */
+	url: string,
+	/** Stream's id */
+	id: string,
+) {
+	const data = await (await fetch(
+		`${url}/${id}`,
+		{
+			method: "GET",
+		},
+	)).json();
 
 	return data;
 }
 
 /** Create a Stream */
-export async function createStream(url: string) {
-	const data = await (await fetch(`${url}`, {
-		method: "POST",
-		body: 
-		`{
+export async function createStream(
+	/** Ceramic database url */
+	url: string,
+) {
+	const data = await (await fetch(
+		`${url}`,
+		{
+			method: "POST",
+			body: `{
 			"type": 0,
 			"genesis": {
 				"header": {
@@ -21,10 +33,11 @@ export async function createStream(url: string) {
 				}
 			}
 		}`,
-		headers: {
-			"Content-Type": "application/json"
+			headers: {
+				"Content-Type": "application/json",
+			},
 		},
-	})).json();
+	)).json();
 
 	return data;
 }
