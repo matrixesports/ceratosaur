@@ -1,9 +1,11 @@
 # Ceratosaur ☄️
 
-[![nest.land](https://nest.land/badge-large.svg)](https://nest.land/package/ceratosaur)
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-black.svg?logo=deno&labelColor=black)](https://deno.land/x/ceratosaur) [![nest.land](https://nest.land/badge-block.svg)](https://nest.land/package/ceratosaur)
 
 Wrapper for interact with the [Ceramic Network](https://ceramic.network) HTTP
 API
+
+[**Documentation**](https://doc.deno.land/https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts/)
 
 ## Example
 
@@ -18,10 +20,9 @@ const database = ceramic(
 );
 
 // this automatically concatenates the url with /api/v0/streams
-ceramic
-	.getStream(
-		"k2t6wyfsu4pg2qvoorchoj23e8hf3eiis4w7bucllxkmlk91sjgluuag5syphl",
-	);
+ceramic.getStream(
+	"k2t6wyfsu4pg2qvoorchoj23e8hf3eiis4w7bucllxkmlk91sjgluuag5syphl",
+);
 ```
 
 or use the `getStream` function
@@ -35,8 +36,3 @@ getStream(
 	"k2t6wyfsu4pg2qvoorchoj23e8hf3eiis4w7bucllxkmlk91sjgluuag5syphl",
 );
 ```
-
-## Docs
-
-You can see a simple docs in the
-[Generated deno.land Docs](https://doc.deno.land/https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts/)
