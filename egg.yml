@@ -3,7 +3,7 @@ name: ceratosaur
 entry: ./src/mod.ts
 description: ☄️ Wrapper for interact with the Ceramic Network API
 homepage: 'https://github.com/matrixesports/ceratosaur'
-version: 1.0.0-beta-4
+version: 1.0.0-beta-5
 releaseType: null
 unstable: true
 unlisted: true
