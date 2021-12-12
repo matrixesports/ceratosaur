@@ -8,12 +8,12 @@ Get it from 🦕 [**deno.land**](https://deno.land/x/ceratosaur) or [**nest.land
 
 Ceratosaur is built in a way that you can use as you like, you can use the base functions, specify the database URL, or use the `ceramic` function.
 
-### Get Stream
+**Get Stream**
 
 With `ceramic`
 
 ```ts
-import { ceramic } from "https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts";
+import { ceramic } from "https://deno.land/x/ceratosaur/src/mod.ts";
 
 const database = ceramic("http://localhost:7007");
 
@@ -26,7 +26,7 @@ ceramic.getStream(
 with `getStream` function
 
 ```ts
-import { getStream } from "https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts";
+import { getStream } from "https://deno.land/x/ceratosaur/src/mod.ts";
 
 // you need specify /api/v0/streams
 getStream(
@@ -35,6 +35,28 @@ getStream(
 );
 ```
 
+**Create stream**
+
+With `ceramic`
+
+```ts
+import { ceramic } from "https://deno.land/x/ceratosaur/src/mod.ts";
+
+const database = ceramic("http://localhost:7007");
+
+const awesomeStream = ceramic.createStream();
+console.log(awesomeStream.streamId);
+```
+
+with `getStream` function
+
+```ts
+import { createStream } from "https://deno.land/x/ceratosaur/src/mod.ts";
+
+const awesomeStream = createStream("http://localhost:7007/api/v0/streams");
+console.log(awesomeStream.streamId);
+```
+
 ## Useful Links
 
-[**Documentation**](https://doc.deno.land/https://x.nest.land/ceratosaur@1.0.0-beta-3/src/mod.ts/)
+[**Documentation**](https://doc.deno.land/https://deno.land/x/ceratosaur/src/mod.ts)

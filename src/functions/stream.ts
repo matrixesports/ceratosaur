@@ -8,11 +8,11 @@ import { Stream } from "../types/mod.ts";
  */
 
 export async function getStream(url: string, id: string): Promise<Stream> {
-	const data = await fetch(`${url}/${id}`, {
+	const data = await (await fetch(`${url}/${id}`, {
 		method: "GET",
-	});
+	})).json();
 
-	return data.json();
+	return data;
 }
 
 /**
@@ -21,23 +21,25 @@ export async function getStream(url: string, id: string): Promise<Stream> {
  * @returns {Promise<any>}
  */
 
-export async function createStream(url: string): Promise<Stream> {
-	const data = await fetch(url, {
+// deno-lint-ignore no-explicit-any
+export async function createStream(url: string, genesis?: any): Promise<Stream> {
+	const gens = genesis ? JSON.stringify(genesis) : `
+	{
+		"header": {
+			"controllers": ["did:key:z6MkfZ6S4NVVTEuts8o5xFzRMR8eC6Y1bngoBQNnXiCvhH8H"]
+		}
+	}`
+
+	const data = await (await fetch(url, {
 		method: "POST",
-		body: `
-		{
+		body: `{
 			"type": 0,
-			"genesis": {
-				"header": {
-					"family": "test",
-					"controllers": ["did:key:z6MkfZ6S4NVVTEuts8o5xFzRMR8eC6Y1bngoBQNnXiCvhH8H"]
-				}
-			}	
+			"genesis": ${gens}
 		}`,
 		headers: {
 			"Content-Type": "application/json",
 		},
-	});
+	})).json();
 
-	return await data.json();
+	return data;
 }

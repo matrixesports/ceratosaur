@@ -1,11 +1,13 @@
 import { Ceramic } from "../types/mod.ts";
 import { createStream, getStream } from "./stream.ts";
+import { getCommits } from "./commits.ts";
 
 /**
  * Ceramic function for easy-use all Ceramic methods without put the URL
  * @param {string} url Ceramic database url
  * @returns {Ceramic}
  */
+
 export function ceramic(url: string): Ceramic {
 	return {
 		getStream: (id: string) => {
@@ -14,5 +16,8 @@ export function ceramic(url: string): Ceramic {
 		createStream: () => {
 			return createStream(`${url}/api/v0/streams`);
 		},
+		getCommits: (streamId: string) => {
+			return getCommits(`${url}/api/v0/commits`, streamId);
+		}
 	};
 }
