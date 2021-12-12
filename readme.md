@@ -13,7 +13,7 @@ Ceratosaur is built in a way that you can use as you like, you can use the base 
 With `ceramic`
 
 ```ts
-import { ceramic } from "https://deno.land/x/ceratosaur/src/mod.ts";
+import { ceramic } from "https://deno.land/x/ceratosaur/mod.ts";
 
 const database = ceramic("http://localhost:7007");
 
@@ -26,7 +26,7 @@ ceramic.getStream(
 with `getStream` function
 
 ```ts
-import { getStream } from "https://deno.land/x/ceratosaur/src/mod.ts";
+import { getStream } from "https://deno.land/x/ceratosaur/mod.ts";
 
 // you need specify /api/v0/streams
 getStream(
@@ -40,7 +40,7 @@ getStream(
 With `ceramic`
 
 ```ts
-import { ceramic } from "https://deno.land/x/ceratosaur/src/mod.ts";
+import { ceramic } from "https://deno.land/x/ceratosaur/mod.ts";
 
 const database = ceramic("http://localhost:7007");
 
@@ -51,7 +51,7 @@ console.log(awesomeStream.streamId);
 with `createStream` function
 
 ```ts
-import { createStream } from "https://deno.land/x/ceratosaur/src/mod.ts";
+import { createStream } from "https://deno.land/x/ceratosaur/mod.ts";
 
 const awesomeStream = createStream("http://localhost:7007/api/v0/streams");
 console.log(awesomeStream.streamId);
