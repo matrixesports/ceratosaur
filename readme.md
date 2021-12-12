@@ -48,7 +48,7 @@ const awesomeStream = ceramic.createStream();
 console.log(awesomeStream.streamId);
 ```
 
-with `getStream` function
+with `createStream` function
 
 ```ts
 import { createStream } from "https://deno.land/x/ceratosaur/src/mod.ts";
