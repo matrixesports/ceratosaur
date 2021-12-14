@@ -2,13 +2,13 @@
 
 import { StreamCommits } from "../types/mod.ts"
 
-/**
- * Get commits of a Stream
- * @param {string} url Ceramics's url
- * @param {string} streamId Stream's Id
- */
-
-export async function getCommits(url: string, streamId: string): Promise<Array<any>> {
+/** Get commits of a Stream */
+export async function getCommits(
+	/** Ceramic database Url */ 
+	url: string,
+	/** Stream id */ 
+	streamId: string,
+): Promise<Array<any>> {
 	const data: StreamCommits = await (await fetch(`${url}/${streamId}`, {
 		method: "GET",
 	})).json();
