@@ -1,14 +1,13 @@
 import { Stream } from "./mod.ts";
+import { MultiQuery } from "./mod.ts";
 
 export interface Ceramic {
 	/** Get stream info in your Ceramic url */
-	getStream: (
-		/** Id of the Stream */
-		id: string,
-	) => Promise<Stream>;
-
+	getStream: (streanId: string) => Promise<Stream>;
 	/** Create a Stream */
 	createStream: () => Promise<Stream>;
 	/** Get commits of a Stream */
-	getCommits: (id: string) => Promise<any>;
+	getCommits: (streamId: string) => Promise<any>;
+	/** Make a multiQuery post to a Stream */
+	multiQuery: (qeries: MultiQuery[]) => Promise<any>;
 }

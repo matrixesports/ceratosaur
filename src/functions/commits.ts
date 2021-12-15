@@ -1,5 +1,3 @@
-// deno-lint-ignore-file no-explicit-any
-
 import { StreamCommits } from "../types/mod.ts";
 
 /** Get commits of a Stream */

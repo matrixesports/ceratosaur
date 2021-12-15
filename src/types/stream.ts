@@ -3,11 +3,6 @@ export interface Stream {
 	state: StreamState;
 }
 
-export interface StreamCommits {
-	streamId: string;
-	commits: Array<any>;
-}
-
 export interface StreamState {
 	anchorProof?: AnchorProof;
 	anchorScheduledFor?: number;

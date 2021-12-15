@@ -1,10 +1,10 @@
 scripts:
-  test:
-    desc: Run the test lib file
-    cmd: deno run --allow-net test.ts
   publish:
-    desc: Publish package in nest.land
+    desc: 🥚 Publish package in nest.land
     cmd: eggs publish
   format:
-    desc: Format project with Deno fmt
+    desc: ✨ Format project with Deno fmt
     cmd: deno fmt --config-file deno.json .
+  test:
+    desc: 🧉 Run the test lib file
+    cmd: deno run --allow-net --no-check test.ts

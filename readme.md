@@ -59,4 +59,4 @@ console.log(awesomeStream.streamId);
 
 ## Useful Links
 
-[**Documentation**](https://doc.deno.land/https://deno.land/x/ceratosaur/src/mod.ts)
+[**Documentation**](https://doc.deno.land/https://deno.land/x/ceratosaur/mod.ts)
