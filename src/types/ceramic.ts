@@ -1,8 +1,5 @@
-// deno-lint-ignore-file no-explicit-any
-
 import { Stream } from "./mod.ts";
 
-/** Ceramic Handler Object */
 export interface Ceramic {
 	/** Get stream info in your Ceramic url */
 	getStream: (
@@ -10,8 +7,8 @@ export interface Ceramic {
 		id: string,
 	) => Promise<Stream>;
 
-	/** Create a Stream in your ceramic url */
+	/** Create a Stream */
 	createStream: () => Promise<Stream>;
-
-	getCommits: (id: string) => Promise<any>
+	/** Get commits of a Stream */
+	getCommits: (id: string) => Promise<any>;
 }

@@ -5,7 +5,7 @@ import { getCommits } from "./commits.ts";
 /** Create object for easy-use all functions without url */
 export function ceramic(
 	/** Ceramic database url */
-	url: string
+	url: string,
 ): Ceramic {
 	return {
 		getStream: (id: string) => {
@@ -16,6 +16,6 @@ export function ceramic(
 		},
 		getCommits: (streamId: string) => {
 			return getCommits(`${url}/api/v0/commits`, streamId);
-		}
+		},
 	};
 }

@@ -1,5 +1,3 @@
-// deno-lint-ignore-file no-explicit-any
-
 export interface Stream {
 	streamId: string;
 	state: StreamState;
@@ -31,14 +29,6 @@ export interface AnchorProof {
 	txHash: any;
 }
 
-export enum AnchorStatus {
-	NOT_REQUESTED,
-	PENDING,
-	PROCESSING,
-	ANCHORED,
-	FAILED,
-}
-
 export interface StreamMetadata {
 	controllers: Array<string>;
 	family?: string;
@@ -51,4 +41,12 @@ export interface StreamNext {
 	content?: any;
 	controllers?: Array<string>;
 	metadata?: StreamMetadata;
+}
+
+export enum AnchorStatus {
+	NOT_REQUESTED,
+	PENDING,
+	PROCESSING,
+	ANCHORED,
+	FAILED,
 }

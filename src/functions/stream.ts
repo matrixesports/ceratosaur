@@ -5,7 +5,7 @@ export async function getStream(
 	/** Ceramic database url */
 	url: string,
 	/** Stream id */
-	id: string
+	id: string,
 ): Promise<Stream> {
 	const data = await (await fetch(`${url}/${id}`, {
 		method: "GET",
@@ -17,16 +17,16 @@ export async function getStream(
 /** Create a [Stream](https://developers.ceramic.network/learn/glossary/#streams) */
 export async function createStream(
 	/** Ceramic database url */
-	url: string, 
+	url: string,
 	/** Genesis config obj (wip) */
-	genesis?: any
+	genesis?: any,
 ): Promise<Stream> {
 	const gens = genesis ? JSON.stringify(genesis) : `
 	{
 		"header": {
 			"controllers": ["did:key:z6MkfZ6S4NVVTEuts8o5xFzRMR8eC6Y1bngoBQNnXiCvhH8H"]
 		}
-	}`
+	}`;
 
 	const data = await (await fetch(url, {
 		method: "POST",
