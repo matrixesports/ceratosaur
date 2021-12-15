@@ -2,12 +2,10 @@ import { Stream } from "../types/mod.ts";
 
 /** Get a [Stream](https://developers.ceramic.network/learn/glossary/#streams) */
 export async function getStream(
-	/** Ceramic database url */
 	url: string,
-	/** Stream id */
-	id: string,
+	streamId: string,
 ): Promise<Stream> {
-	const data = await (await fetch(`${url}/${id}`, {
+	const data = await (await fetch(`${url}/${streamId}`, {
 		method: "GET",
 	})).json();
 
@@ -16,9 +14,7 @@ export async function getStream(
 
 /** Create a [Stream](https://developers.ceramic.network/learn/glossary/#streams) */
 export async function createStream(
-	/** Ceramic database url */
 	url: string,
-	/** Genesis config obj (wip) */
 	genesis?: any,
 ): Promise<Stream> {
 	const gens = genesis ? JSON.stringify(genesis) : `

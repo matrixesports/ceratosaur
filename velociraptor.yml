@@ -1,10 +1,10 @@
 scripts:
   test:
     desc: Run the test lib file
-    cmd: deno run -A test.ts
+    cmd: deno run --allow-net test.ts
   publish:
     desc: Publish package in nest.land
     cmd: eggs publish
   format:
     desc: Format project with Deno fmt
-    cmd: deno fmt --options-use-tabs true --options-indent-width 4 --options-prose-wrap never --options-line-width 160 .
+    cmd: deno fmt --config-file deno.json .
