@@ -15,20 +15,16 @@ export async function getStream(
 /** Create a [Stream](https://developers.ceramic.network/learn/glossary/#streams) */
 export async function createStream(
 	url: string,
-	genesis?: any,
 ): Promise<Stream> {
-	const gens = genesis ? JSON.stringify(genesis) : `
-	{
-		"header": {
-			"controllers": ["did:key:z6MkfZ6S4NVVTEuts8o5xFzRMR8eC6Y1bngoBQNnXiCvhH8H"]
-		}
-	}`;
-
 	const data = await (await fetch(url, {
 		method: "POST",
 		body: `{
 			"type": 0,
-			"genesis": ${gens}
+			"genesis": {
+				"header": {
+					"controllers": ["did:key:z6MkfZ6S4NVVTEuts8o5xFzRMR8eC6Y1bngoBQNnXiCvhH8H"]
+				}
+			}
 		}`,
 		headers: {
 			"Content-Type": "application/json",
